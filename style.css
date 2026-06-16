@@ -27,13 +27,14 @@ body
 /* Center Content Area */
 .main 
 {
-    flex: 1; /* takes up all remaining space between sidebars */
-    padding: 20px;
+    flex: 1;
+    padding: 60px 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;    /* Centers everything horizontally */
-    justify-content: center; /* Centers everything vertically */
+    align-items: center;
+    justify-content: space-between;
     text-align: center;
+    box-sizing: border-box;
 }
 
 /* Center Logo */
@@ -69,7 +70,7 @@ body
 
 .itch-icon 
 {
-    width: 60px; /* Shrank this down from 200px so it looks like an icon under the text */
+    width: 100px;
     height: auto;
     display: block;
     transition: transform 0.2s ease;
