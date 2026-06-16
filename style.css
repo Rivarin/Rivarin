@@ -221,7 +221,7 @@ body
 
     .top-bar-content {
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         gap: 4px;
         height: auto;
         padding: 15px 0;
