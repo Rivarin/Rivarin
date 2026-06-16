@@ -220,21 +220,21 @@ body
 {
     .top-bar 
     {
-        animation: swipeUpMobile 1.2s cubic-bezier(0.77, 0, 0.175, 1) 2s forwards;
+        animation: swipeUpMobile 0.8s cubic-bezier(0.77, 0, 0.175, 1) 1s forwards;
     }
 
     .top-bar-content 
     {
         flex-direction: column;
         justify-content: space-between;
-        gap: 5px;
         height: auto;
-        padding: 15px 0;
+        padding: 5px 0;
     }
 
     .top-bar p 
     {
-        font-size: 9px;
+        padding: 10px 0;
+        font-size: 16px;
         text-align: center;
     }
 
@@ -256,7 +256,7 @@ body
         margin-top: 30px;
     }
 
-    .itch-icon 
+    .itch-icon
     {
         width: 160px;
     }
@@ -264,11 +264,11 @@ body
     @keyframes swipeUpMobile 
     {
         from {
-            height: 100vh;
+            max-height: 100vh;
         }
 
         to {
-            height: auto;
+            max-height: 120px;
         }
     }
 }
