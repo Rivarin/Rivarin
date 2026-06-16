@@ -2,32 +2,106 @@ body
 {
     margin: 0;
     background-color: #ef9385;
+    background-image: url('Images/RinBG.png');
+    background-repeat: repeat;
     color: #87382d;
     font-family: 'Nunito', sans-serif;
+    animation: scrollBackground 50s linear infinite;
 }
 
-/* Main layout container */
+.loading-screen 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #87382d;
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    animation: fadeOutLoader 0.5s ease-in-out 2s forwards;
+}
+
+.progress-bar-container 
+{
+    width: 500px;
+    height: 36px;
+    border: 2px solid #ef9385;
+    border-radius: 6px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.progress-bar-fill 
+{
+    height: 100%;
+    background-color: #ef9385;
+    border-radius: 4px;
+    width: 0%;
+    animation: fillProgress 1.8s ease-in-out forwards;
+}
+
+.loading-text 
+{
+    margin: 0;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #ef9385;
+}
+
 .layout 
 {
     display: flex;
-    height: 100vh; 
-}
-
-/* Left & Right sidebars */
-.sidebar-left, .sidebar-right
-{
-    width: 250px;
-    background-color: #87382d;
-    color: #ef9385;
-    padding: 20px;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 60px;
     box-sizing: border-box;
-    height: 100vh; 
 }
 
-/* Center Content Area */
-.main {
+.top-bar 
+{
+    width: 100%;
+    background-color: #87382d;
+    padding: 0 40px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    animation: swipeUp 1.2s cubic-bezier(0.77, 0, 0.175, 1) 2s forwards;
+    height: 100vh;
+}
+
+.top-bar-content 
+{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: fadeInText 0.6s ease-out 2.6s forwards;
+    opacity: 0;
+}
+
+.top-bar p 
+{
+    margin: 0;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    color: #ef9385;
+}
+
+.main 
+{
     flex: 1;
-    padding: 20px 20px 300px 20px;
+    padding: 20px 20px 100px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,38 +115,24 @@ body
     width: 400px;
     height: auto;
     display: block;
-    margin: 20px auto 0 auto;
+    margin: 0 auto;
 }
 
-/* "Rin" Text */
-.main h1 
+.main-bottom 
 {
-    font-size: 80px;         
-    color: #87382d;          
-    margin: -10px 0 0 0;
-    font-weight: 700;        
-}
-
-/* Bottom section of main area */
-.main-bottom {
     display: flex;
-    padding: 100px 20px 20px 20px;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
 }
 
-.main-bottom p 
-{
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-/* Itch Link & Icon */
 .itch-link 
 {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
 }
 
@@ -84,7 +144,74 @@ body
     transition: transform 0.2s ease;
 }
 
-.itch-icon:hover 
+    .itch-icon:hover 
+    {
+        transform: scale(1.1);
+    }
+
+@keyframes scrollBackground 
 {
-    transform: scale(1.1);
+    from 
+    {
+        background-position: 0 0;
+    }
+
+    to 
+    {
+        background-position: 1920px 1080px;
+    }
+}
+
+@keyframes swipeUp 
+{
+    from 
+    {
+        height: 100vh;
+    }
+
+    to 
+    {
+        height: 60px;
+    }
+}
+
+@keyframes fadeInText 
+{
+    from 
+    {
+        opacity: 0;
+    }
+
+    to 
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutLoader 
+{
+    from 
+    {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    to 
+    {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes fillProgress 
+{
+    from 
+    {
+        width: 0%;
+    }
+
+    to 
+    {
+        width: 100%;
+    }
 }
