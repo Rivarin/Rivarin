@@ -37,6 +37,14 @@ body
     box-sizing: border-box;
 }
 
+.main-bottom h 
+{
+    font-size: 100px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
 /* Center Logo */
 .main-logo 
 {
@@ -54,7 +62,8 @@ body
     align-items: center;
 }
 
-.main-bottom p {
+.main-bottom p 
+{
     margin-bottom: 10px;
     font-weight: bold;
 }
