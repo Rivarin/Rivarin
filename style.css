@@ -28,7 +28,8 @@ body
 
 .progress-bar-container 
 {
-    width: 500px;
+    width: 90%;
+    max-width: 500px;
     height: 36px;
     border: 2px solid #ef9385;
     border-radius: 6px;
@@ -212,5 +213,41 @@ body
     to 
     {
         width: 100%;
+    }
+}
+
+@media (max-width: 768px) 
+{
+
+    .top-bar-content {
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .top-bar p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .layout {
+        padding-top: 85px;
+    }
+
+    .main-logo {
+        width: 85%;
+        max-width: 300px;
+    }
+
+    .main-bottom {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .itch-icon {
+        width: 160px;
     }
 }
