@@ -37,21 +37,21 @@ body
     box-sizing: border-box;
 }
 
-.main-bottom h1
-{
-    font-size: 100px;
-    margin-bottom: 0px;
-    font-weight: bold;
-}
-
-
-/* Center Logo */
 .main-logo 
 {
     width: 400px;
     height: auto;
     display: block;
-    margin: 0px 0;
+    margin: 20px auto 0 auto; /* Removed the bottom margin */
+}
+
+/* "Rin" Text */
+.main h1 
+{
+    font-size: 80px;         
+    color: #87382d;          
+    margin: -10px 0 0 0; /* A slight negative top margin pulls it even closer to the logo image */
+    font-weight: 700;        
 }
 
 /* Bottom section of main area */
