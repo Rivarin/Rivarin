@@ -3,7 +3,7 @@ body
     margin: 0;
     background-color: #ef9385;
     color: #87382d;
-    font-family: Nunito, sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 /* Main layout container */
@@ -13,76 +13,69 @@ body
     height: 100vh; 
 }
 
-/* Main content area */
-.main 
-{
-    flex: 1; /* takes remaining space */
-    padding: 20px;
-}
-
-/*Side bar Field*/
-
-.sidebar-image 
-{
-    width: 200px;
-    display: block;
-    margin: 20px auto;
-}
-
-/* Left sidebar */
-.sidebar-left
+/* Left & Right sidebars */
+.sidebar-left, .sidebar-right
 {
     width: 250px;
     background-color: #87382d;
     color: #ef9385;
-    font-family: 'Nunito', sans-serif;
-    display: flex;
-    flex-direction: column; 
-    justify-content: space-between; /* push bottom content down */
     padding: 20px;
     box-sizing: border-box;
     height: 100vh; 
 }
 
-.sidebar-link 
+/* Center Content Area */
+.main 
+{
+    flex: 1; /* takes up all remaining space between sidebars */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Centers everything horizontally */
+    justify-content: center; /* Centers everything vertically */
+    text-align: center;
+}
+
+/* Center Logo */
+.main-logo 
+{
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+}
+
+/* Bottom section of main area */
+.main-bottom 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-bottom p {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Itch Link & Icon */
+.itch-link 
 {
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    color: #ef9385;
     text-decoration: none;
-    padding: 8px 0;
 }
 
-    .sidebar-link:hover 
-    {
-        color: #ffccaa;
-        text-decoration: underline;
-    }
-
-.sidebar-icon 
+.itch-icon 
 {
-    width: 200px; 
+    width: 60px; /* Shrank this down from 200px so it looks like an icon under the text */
+    height: auto;
     display: block;
-    margin: 0 auto; 
-    transition: 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
-    .sidebar-icon:hover 
-    {
-        transform: scale(1.1);
-    }
-
-/* Right sidebar */
-.sidebar-right
+.itch-icon:hover 
 {
-    width: 250px;
-    background-color: #87382d;
-    color: #ef9385;
-    font-family: 'Nunito', sans-serif;
-    display: flex;
-    flex-direction: column; 
-    padding: 20px;
-    box-sizing: border-box;
-    height: 100vh; 
+    transform: scale(1.1);
 }
