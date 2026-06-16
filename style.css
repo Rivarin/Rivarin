@@ -218,36 +218,57 @@ body
 
 @media (max-width: 768px) 
 {
+    .top-bar 
+    {
+        animation: swipeUpMobile 1.2s cubic-bezier(0.77, 0, 0.175, 1) 2s forwards;
+    }
 
-    .top-bar-content {
+    .top-bar-content 
+    {
         flex-direction: column;
         justify-content: space-between;
-        gap: 4px;
+        gap: 5px;
         height: auto;
         padding: 15px 0;
     }
 
-    .top-bar p {
-        font-size: 5px;
+    .top-bar p 
+    {
+        font-size: 9px;
         text-align: center;
     }
 
-    .layout {
+    .layout 
+    {
         padding-top: 85px;
     }
 
-    .main-logo {
+    .main-logo 
+    {
         width: 85%;
         max-width: 300px;
     }
 
-    .main-bottom {
+    .main-bottom 
+    {
         flex-direction: column;
         gap: 20px;
         margin-top: 30px;
     }
 
-    .itch-icon {
+    .itch-icon 
+    {
         width: 160px;
+    }
+
+    @keyframes swipeUpMobile 
+    {
+        from {
+            height: 100vh;
+        }
+
+        to {
+            height: auto;
+        }
     }
 }
