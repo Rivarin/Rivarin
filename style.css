@@ -32,7 +32,7 @@ body
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
     box-sizing: border-box;
 }
@@ -42,7 +42,7 @@ body
     width: 400px;
     height: auto;
     display: block;
-    margin: 20px auto 0 auto; /* Removed the bottom margin */
+    margin: 20px auto 0 auto;
 }
 
 /* "Rin" Text */
@@ -50,7 +50,7 @@ body
 {
     font-size: 80px;         
     color: #87382d;          
-    margin: -10px 0 0 0; /* A slight negative top margin pulls it even closer to the logo image */
+    margin: -10px 0 0 0;
     font-weight: 700;        
 }
 
