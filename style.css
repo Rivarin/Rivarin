@@ -84,9 +84,20 @@ body
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     animation: fadeInText 0.6s ease-out 1.6s forwards;
     opacity: 0;
+}
+
+#top-text 
+{
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+    transform: translateX(0);
+}
+
+.text-move-center 
+{
+    transform: translateX(calc(50vw - 50% - 40px)) !important;
 }
 
 .top-bar p 
@@ -216,6 +227,73 @@ body
     }
 }
 
+.logo-pulsing {
+    animation: musicHeartbeat 0.5s ease-in-out infinite;
+}
+
+@keyframes musicHeartbeat 
+{
+    0% 
+    {
+        transform: scale(1);
+    }
+
+    30% 
+    {
+        transform: scale(1.01);
+    }
+
+    60% 
+    {
+        transform: scale(0.99);
+    }
+
+    100% 
+    {
+        transform: scale(1);
+    }
+}
+
+.fade-out-links 
+{
+    animation: fadeOutEffect 0.4s ease-in-out forwards;
+}
+
+.fade-in-links 
+{
+    animation: fadeInEffect 0.4s ease-in-out forwards;
+}
+
+@keyframes fadeOutEffect 
+{
+    from 
+    {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    to 
+    {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes fadeInEffect 
+{
+    from 
+    {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    to 
+    {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
 @media (max-width: 768px) 
 {
     .top-bar 
@@ -247,6 +325,8 @@ body
     {
         width: 85%;
         max-width: 300px;
+        pointer-events: none !important;
+        cursor: default !important;
     }
 
     .main-bottom 
